@@ -1,0 +1,43 @@
+name: plot
+version: 1.0.3
+kind: compute
+
+dependencies:
+  - python3
+  - python3-yaml
+  - python3-pip
+
+files:
+  - visualization.py
+
+install:
+  - pip3 install matplotlib
+  - pip3 install seaborn
+  - pip3 install pandas
+
+entrypoint:
+  kind: task
+  exec: visualization.py
+
+actions:
+  'create_plot':
+    command:
+      args:
+        - create_plot
+    input:
+      - type: string
+        name: file
+    output:
+      - type: string
+        name: output
+
+  'create_boxplot':
+    command:
+      args:
+        - create_boxplot
+    input:
+      - type: string
+        name: file
+    output:
+      - type: string
+        name: output
