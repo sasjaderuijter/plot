@@ -9,3 +9,6 @@ Import the package as follows:
 ```shell
 $ brane import sasjaderuijter/plot
 ```
+
+For examples on how to run the functions in BraneScript, see the comprehensive GitHub repository **Group12_WSCBS**:
+https://github.com/sasjaderuijter/Group12_WSCBS
